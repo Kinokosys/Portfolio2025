@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SavonComponent } from './savon.component';
+import { SavonAPPComponent } from './savon-app.component';
 
-describe('SavonComponent', () => {
-  let component: SavonComponent;
-  let fixture: ComponentFixture<SavonComponent>;
+describe('SavonAPPComponent', () => {
+  let component: SavonAPPComponent;
+  let fixture: ComponentFixture<SavonAPPComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SavonComponent]
+      declarations: [SavonAPPComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SavonComponent);
+    fixture = TestBed.createComponent(SavonAPPComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

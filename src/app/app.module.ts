@@ -3,11 +3,15 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppComponent } from './app.component';
 import { GeneralComponent } from './components/general/general.component';
+import { SavonComponent } from './components/savon/savon.component';
+import { AventureComponent } from './components/aventure/aventure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GeneralComponent
+    GeneralComponent,
+    SavonComponent,
+    AventureComponent
   ],
   imports: [
     BrowserModule

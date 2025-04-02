@@ -1,3 +1,15 @@
+#home img {
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 320px; /* Ajuste la hauteur selon tes besoins */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
 h2 {
     margin-top: 30px;
 }

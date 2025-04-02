@@ -13,6 +13,25 @@
     text-align: center;
 }
 
+section {
+    margin-bottom: 40px;
+
+    border-bottom: 4px solid #7aa17a; /* Barre verticale rouge */
+    padding-bottom: 10px; /* Espacement entre la barre et le texte */
+
+}
+
+.section {
+    transform: translateX(0);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.section.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 /**Resume**/
 

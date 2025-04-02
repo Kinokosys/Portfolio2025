@@ -1,5 +1,95 @@
 <div class="section">
-    <div class="content">
-        <p>savon-api works!</p>
-    </div>
+  <div class="content">
+    <section id="home">
+      <img src="API.png" />
+    </section>
+
+    <section class="presentation">
+      <h2>Projet 2 : SAP-API</h2>
+      <p>Application back-end développée en Kotlin et MariaDB.</p>
+
+      <h2>Présentation</h2>
+
+      <h3>Contexte</h3>
+      <p>
+        Le projet est un partenariat entre l’entreprise Adepro (prestataire pour
+        la mise sur le marché des produits cosmétiques) et le lycée Léonard de
+        Vinci de Melun.
+      </p>
+
+      <ul>
+        <li><a href="https://www.adepro-consultant.fr/">Site Adepro</a></li>
+        <li><a href="https://www.vinci-melun.org/">Site du lycée LDV</a></li>
+      </ul>
+
+      <p>
+        Adepro souhaite créer une application de type simulateur/calculateur qui
+        permet aux utilisateurs de saisir une recette de savon et d’obtenir les
+        scores sur les différentes caractéristiques du savon (douceur, séchage,
+        pouvoir lavant, etc.).
+      </p>
+
+      <p style="text-decoration: underline">
+        Une recette de savon est constituée de :
+      </p>
+      <ul>
+        <li>
+          Un ou plusieurs corps gras (ex : huile d’olive, huile de noix de coco,
+          etc.)
+        </li>
+        <li>Un agent alcalin (soude ou potasse)</li>
+        <li>
+          Éventuellement des ingrédients supplémentaires (ex : cire d’abeille)
+        </li>
+      </ul>
+
+      <p style="text-decoration: underline">
+        Il y a deux demandes spécifiques :
+      </p>
+      <ul>
+        <li>
+          Pour chaque caractéristique du savon en plus d’un simple de score
+          ilfaut une « mention » exemple : un savon qui un score de douceur
+          entre 4 et 5 est doux un savon entre 1 et 2 est dur …
+        </li>
+        <li>
+          Les caractéristiques du savon doivent être affiché sous la forme
+          d’undiagramme Radar
+        </li>
+      </ul>
+
+      <p>Nous nous intéressons ici à la parti Back-end du projet.</p>
+    </section>
+
+    <section class="diagramme">
+      <h2>Diagrammes</h2>
+
+      <h3>Diagramme de cas d'utilisation général</h3>
+      <img src="cas_utili_api.png" />
+
+      <h3>Diagramme de classe</h3>
+      <img src="diag_classe_api.png" />
+
+      <h3>Architecture</h3>
+      <img src="architect_api.png" />
+    </section>
+
+    <section class="liens" style="margin-top: 20px">
+      <h2>Liens utiles</h2>
+      <ul>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/15GbSgVQHKCJaYLWShnc0bry2bkwZZAIr/edit"
+            >Cahier des charges</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/1zyPiz_nD75RyF3g1wo2ddTEUeWXkBU4P/edit?tab=t.0"
+            >Simulateur</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
 </div>

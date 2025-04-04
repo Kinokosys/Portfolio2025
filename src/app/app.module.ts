@@ -5,7 +5,8 @@ import { GeneralComponent } from './components/general/general.component';
 import { AventureComponent } from './components/aventure/aventure.component';
 import { SavonAPIComponent } from './components/savon-api/savon-api.component';
 import { SavonAPPComponent } from './components/savon-app/savon-app.component';
-import { AppRoutingModule } from './app-routing.module'; // 🔥 Ajout du routing
+import { AppRoutingModule } from './app-routing.module';
+import { VeilleComponent } from './components/veille/veille.component'; // 🔥 Ajout du routing
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module'; // 🔥 Ajout du routin
     GeneralComponent,
     AventureComponent,
     SavonAPIComponent,
-    SavonAPPComponent
+    SavonAPPComponent,
+    VeilleComponent
   ],
   imports: [
     BrowserModule,

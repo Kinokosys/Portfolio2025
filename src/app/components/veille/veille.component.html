@@ -1,35 +1,220 @@
-<section id="veille">
-    <h2>Veille Technologique : Robots Humanoïdes</h2>
-    <p>
-      Cette veille technologique porte sur les avancées majeures dans le domaine des robots humanoïdes depuis novembre 2023.
-    </p>
-  
-    <div class="veille-article">
-      <h3>🔹 Novembre 2023 – Boston Dynamics améliore Atlas</h3>
+<div class="section">
+  <div class="content">
+    <section id="veille">
+      <h2>Veille Technologique : Robots Humanoïdes</h2>
       <p>
-        Boston Dynamics dévoile une nouvelle version d’<strong>Atlas</strong> avec une mobilité accrue et une meilleure agilité dans des environnements complexes. Le robot est capable de se relever seul après une chute et d’exécuter des tâches précises en entrepôt.
+        Cette veille technologique porte sur les avancées majeures dans le
+        domaine des robots humanoïdes depuis novembre 2023.
       </p>
-    </div>
-  
-    <div class="veille-article">
-      <h3>🔹 Décembre 2023 – Tesla Optimus Gen 2</h3>
-      <p>
-        Elon Musk présente le prototype <strong>Optimus Gen 2</strong>. Le robot humanoïde de Tesla gagne en fluidité de mouvement, en reconnaissance d’objets et en capacités d’interaction vocale grâce à une IA améliorée.
-      </p>
-    </div>
-  
-    <div class="veille-article">
-      <h3>🔹 Janvier 2024 – Humanoid AI Conference</h3>
-      <p>
-        Lors de la conférence internationale sur l’intelligence artificielle humanoïde, plusieurs startups présentent des robots capables d’émotions simulées et de communication non verbale (expressions faciales, gestuelle, ton de voix).
-      </p>
-    </div>
-  
-    <div class="veille-article">
-      <h3>🔹 Mars 2024 – Robots dans le secteur médical</h3>
-      <p>
-        Des robots humanoïdes sont testés en milieu hospitalier pour l’accompagnement des patients et l’aide à la mobilité. Le projet pilote au Japon montre des résultats positifs sur l’acceptation sociale des humanoïdes dans les soins.
-      </p>
-    </div>
-  </section>
-  
+
+      <!-- Utilisation d'une seule boucle *ngFor pour tous les articles -->
+      <div
+        class="veille-article"
+        *ngFor="let article of articles; let i = index"
+      >
+        <h3>
+          🔹
+          {{
+            article.id === 1
+              ? "Novembre 2023 – Boston Dynamics améliore Atlas"
+              : article.id === 2
+              ? "Décembre 2023 – Tesla Optimus Gen 2"
+              : article.id === 3
+              ? "Janvier 2024 – Humanoid AI Conference"
+              : "Mars 2024 – Robots dans le secteur médical"
+          }}
+        </h3>
+        <p>
+          <!-- Contenu de l'article dynamique en fonction de l'id de l'article -->
+          <ng-container *ngIf="article.id === 1">
+            Boston Dynamics dévoile une nouvelle version
+            d’<strong>Atlas</strong>avec une mobilité accrue et une meilleure
+            agilité dans des environnements complexes. Le robot est capable de
+            se relever seul après une chute et d’exécuter des tâches précises en
+            entrepôt.
+          </ng-container>
+          <ng-container *ngIf="article.id === 2">
+            Elon Musk présente le prototype <strong>Optimus Gen 2</strong>. Le
+            robot humanoïde de Tesla gagne en fluidité de mouvement, en
+            reconnaissance d’objets et en capacités d’interaction vocale grâce à
+            une IA améliorée.
+          </ng-container>
+          <ng-container *ngIf="article.id === 3">
+            Lors de la conférence internationale sur l’intelligence artificielle
+            humanoïde, plusieurs startups présentent des robots capables
+            d’émotions simulées et de communication non verbale (expressions
+            faciales, gestuelle, ton de voix).
+          </ng-container>
+          <ng-container *ngIf="article.id === 4">
+            Des robots humanoïdes sont testés en milieu hospitalier pour
+            l’accompagnement des patients et l’aide à la mobilité. Le projet
+            pilote au Japon montre des résultats positifs sur l’acceptation
+            sociale des humanoïdes dans les soins.
+          </ng-container>
+        </p>
+
+        <!-- Affichage du contenu supplémentaire -->
+        <div class="extra-content" *ngIf="article.visible">
+          <p>
+            <!-- Contenu supplémentaire en fonction de l'id de l'article -->
+            <ng-container *ngIf="article.id === 1">
+              <h3>Contexte:</h3>
+              <p>
+                Boston Dynamics est connu pour ses robots dynamiques comme Spot
+                (robot-chien) et Atlas (humanoïde très mobile).
+              </p>
+
+              <h3>Événement:</h3>
+              <p>
+                En novembre 2023, une mise à jour majeure d’Atlas a été
+                présentée dans une vidéo de démonstration. Le robot humanoïde
+                affiche :
+              </p>
+              <ul>
+                <li>
+                  Une capacité de déplacement dynamique (saut, roulade,
+                  franchissement d'obstacles).
+                </li>
+                <li>
+                  Un système de perception 3D amélioré pour mieux détecter son
+                  environnement.
+                </li>
+                <li>
+                  Une nouvelle fonction : récupération automatique après chute
+                  (il se redresse seul).
+                </li>
+                <li>
+                  Des mouvements plus fluides et naturels, notamment lors de
+                  l'interaction avec des objets (transport de boîtes, empilement
+                  précis...).
+                </li>
+              </ul>
+              <p style="margin-top: 15px;">
+                <b>Utilisation visée: </b>logistique et aide en milieux
+                industriels complexes.
+              </p>
+            </ng-container>
+            <ng-container *ngIf="article.id === 2">
+              <h3>Contexte:</h3>
+              <p>
+                Elon Musk avait dévoilé le robot Optimus en 2022. Il promettait
+                un robot abordable capable d’accomplir des tâches du quotidien.
+              </p>
+
+              <h3>Événement:</h3>
+              <p>La version Gen 2 est dévoilée fin décembre 2023 :</p>
+              <ul>
+                <li>
+                  Poids réduit (49 kg), mouvements stabilisés, design plus
+                  humain.
+                </li>
+                <li>
+                  Reconnaissance vocale et faciale intégrée, pilotée par un
+                  dérivé du modèle d'IA de Tesla.
+                </li>
+                <li>
+                  Mains plus précises : capable de saisir des objets fragiles ou
+                  fins.
+                </li>
+                <li>
+                  Démonstration en usine : Optimus trie des objets, effectue des
+                  gestes doux, se coordonne avec des machines.
+                </li>
+              </ul>
+              <p style="margin-top: 15px;">
+                <b>Objectif annoncé: </b>un robot polyvalent pouvant être
+                utilisé dans les foyers et les entreprises.
+              </p>
+            </ng-container>
+            <ng-container *ngIf="article.id === 3">
+              <h3>Contexte:</h3>
+              <p>
+                Conférence internationale réunissant chercheurs, ingénieurs et
+                entreprises de la robotique humanoïde et de l’intelligence
+                artificielle.
+              </p>
+
+              <h3>Temps forts de l'édition 2024:</h3>
+              <ul>
+                <li>
+                  Startups coréennes et japonaises ont présenté des robots
+                  capables de :
+                </li>
+                <ul>
+                  <li>
+                    Simuler des émotions humaines (sourires, expressions
+                    faciales).
+                  </li>
+                  <li>
+                    Reproduire des gestes sociaux (haussement d’épaules,
+                    hochement de tête).
+                  </li>
+                </ul>
+                <li>
+                  Utilisation de modèles d’IA générative pour améliorer les
+                  dialogues humains-robots.
+                </li>
+                <li>
+                  Mise en avant de la "sympathie robotique", c’est-à-dire la
+                  capacité des robots à rendre l'interaction agréable et
+                  naturelle.
+                </li>
+              </ul>
+
+              <h3>Applications visées :</h3>
+              <ul>
+                <li>Accueil en entreprise</li>
+                <li>Assistance sociale et éducative</li>
+                <li>Compagnons interactifs pour personnes âgées</li>
+              </ul>
+            </ng-container>
+            <ng-container *ngIf="article.id === 4">
+              <h3>Contexte:</h3>
+              <p>Le Japon est pionnier en robotique sociale et médicale.</p>
+
+              <h3>Événement:</h3>
+              <ul>
+                <li>
+                  Des essais cliniques sont menés avec des robots humanoïdes
+                  dans des hôpitaux à Tokyo.
+                </li>
+                <li>Objectifs:</li>
+                <ul>
+                  <li>
+                    Aide à la mobilité des patients âgés ou en rééducation.
+                  </li>
+                  <li>
+                    Support émotionnel via des interactions positives (jeux,
+                    lectures, conversations).
+                  </li>
+                  <li>Prévention de l’isolement et amélioration du moral.</li>
+                </ul>
+                <li>
+                  Les robots sont capables de détecter les émotions du patient
+                  (via le visage ou la voix) et d’adapter leur comportement.
+                </li>
+              </ul>
+
+              <h3>Résultats préliminaires:</h3>
+              <ul>
+                <li>
+                  Patients et personnel médical estiment que le robot est perçu
+                  comme un soutien, non une menace.
+                </li>
+                <li>
+                  Augmentation de l’engagement des patients dans certaines
+                  activités.
+                </li>
+              </ul>
+            </ng-container>
+          </p>
+        </div>
+
+        <!-- Bouton pour basculer la visibilité -->
+        <button class="voir-plus-btn" (click)="toggleContent(i)">
+          {{ article.visible ? "Voir moins" : "Voir plus" }}
+        </button>
+      </div>
+    </section>
+  </div>
+</div>

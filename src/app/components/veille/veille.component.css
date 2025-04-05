@@ -7,7 +7,7 @@
   }
   
   #veille h2 {
-    color: #1E90FF;
+    color: #4b634b;
     margin-bottom: 20px;
   }
   
@@ -15,7 +15,7 @@
     margin-bottom: 20px;
     padding: 15px;
     background: white;
-    border-left: 5px solid #1E90FF;
+    border-left: 5px solid #5c795c;
     border-radius: 8px;
   }
   
@@ -28,4 +28,25 @@
     color: #555;
     line-height: 1.5;
   }
+
+  .extra-content {
+    display: block; /* Assure-toi que le contenu s'affiche lorsqu'il est activé */
+    margin-top: 10px;
+    color: #444;
+    font-size: 15px;
+  }
   
+  .voir-plus-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #7aa17a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .voir-plus-btn:hover {
+    background-color: #5c795c;
+  }
